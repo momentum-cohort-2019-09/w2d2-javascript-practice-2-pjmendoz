@@ -86,13 +86,14 @@ function minimum(num) {
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
 
-
-
 // 7. Create a function called `textList` that takes an array and joins its elements
 // into a string separated by commas.
 //
 // For example, `textList(['Cadence', 'Ordel', 'Marion'])` results in the string
 // `"Cadence,Ordel,Marion"`.
 
-// function textlist = 
-//     let staff = staff.reduce((staff, word) =>
+function textList(members) {
+    let member = ''
+    member = members.join(',')
+    return member 
+}
