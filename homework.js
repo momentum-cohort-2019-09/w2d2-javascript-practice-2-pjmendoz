@@ -22,6 +22,7 @@ function remove(members, name) {
 
 // 3. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
+let num = [1, 2, 3, 4]
 
 function sum(num) {
     let sum = 0 
@@ -36,22 +37,29 @@ function sum(num) {
 // 4. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
 
-function average(num) {    
-
-    let avg = 0 
-   
-    for (let i = 0; i < num.length; i++) {
-        sum = sum + numbers[i]
+function average(num) {
+    if (num === undefined || num.length === 0) {
+        return undefined
     }
-    avg = sum/num.length 
-    return average
-}  
+    let avg = sum(num) / num.length 
+    return avg 
+}
 
 // 5. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
 
 function minimum(num) {
+    if (num === undefined || num.length === 0) {
+        return undefined
+    }
 
+    let min = num[0]
+    for (let i = 0;i < num.length; i++) {
+        if (min > num[i]) {
+        min = num[i]
+        }
+    }
+    return min
 }
 
 // 6. There are many techniques to sort arrays in programming. Your programming
@@ -85,3 +93,6 @@ function minimum(num) {
 //
 // For example, `textList(['Cadence', 'Ordel', 'Marion'])` results in the string
 // `"Cadence,Ordel,Marion"`.
+
+// function textlist = 
+//     let staff = staff.reduce((staff, word) =>
