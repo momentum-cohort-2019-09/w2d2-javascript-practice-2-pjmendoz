@@ -36,18 +36,23 @@ function sum(num) {
 // 4. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
 
-function average(num) {
-    let sum = 0 
-    let avg = 0 
+function average(num) {    
 
+    let avg = 0 
+   
     for (let i = 0; i < num.length; i++) {
-        sum += num[i];
+        sum = sum + numbers[i]
     }
     avg = sum/num.length 
+    return average
 }  
 
 // 5. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
+
+function minimum(num) {
+
+}
 
 // 6. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
@@ -72,6 +77,8 @@ function average(num) {
 // Note 2: Selection sort can be implemented using one array. Read the explanation at
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
+
+
 
 // 7. Create a function called `textList` that takes an array and joins its elements
 // into a string separated by commas.
