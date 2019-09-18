@@ -52,7 +52,6 @@ function minimum(num) {
     if (num === undefined || num.length === 0) {
         return undefined
     }
-
     let min = num[0]
     for (let i = 0;i < num.length; i++) {
         if (min > num[i]) {
@@ -85,6 +84,31 @@ function minimum(num) {
 // Note 2: Selection sort can be implemented using one array. Read the explanation at
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
+
+function removeOnce (array, itemToRemove) {
+    let idx = array.indexOf(itemToRemove)
+    if (idx !== -1) {
+        let arrayCopy = array.slice()
+        return arrayCopy.splice(idx, 1)
+    }
+    return array
+}
+
+
+function selectionSort(array) {
+    let arrayCopy = array.slice()
+    let sortedArray= []
+
+    while (arrayCopy.length > 0) {
+        let minVal = minimum(arrayCopy)
+        arrayCopy = removeOnce(minVal)
+        sortedArray.push(minVal)
+    }
+
+    return sortedArray
+}    
+
+// One by one you are going to get the smallest number in the original array and take it out of the original array and then put it into a new array. 
 
 // 7. Create a function called `textList` that takes an array and joins its elements
 // into a string separated by commas.
