@@ -85,14 +85,14 @@ function minimum(num) {
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
 
-function removeOnce (array, itemToRemove) {
-    let idx = array.indexOf(itemToRemove)
-    if (idx !== -1) {
-        let arrayCopy = array.slice()
-        return arrayCopy.splice(idx, 1)
-    }
-    return array
-}
+// function removeOnce (array, itemToRemove) {
+//     let idx = array.indexOf(itemToRemove)
+//     if (idx !== -1) {
+//         let arrayCopy = array.slice()
+//         return arrayCopy.splice(idx, 1)
+//     }
+//     return array
+// }
 
 
 function selectionSort(array) {
@@ -101,8 +101,10 @@ function selectionSort(array) {
 
     while (arrayCopy.length > 0) {
         let minVal = minimum(arrayCopy)
-        arrayCopy = removeOnce(minVal)
         sortedArray.push(minVal)
+        
+        letminValIdx = arrayCopy.indexOf(minVal)
+        arrayCopy.splice(minValIdx, 1)
     }
 
     return sortedArray
